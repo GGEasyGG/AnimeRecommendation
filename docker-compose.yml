@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+    recsys:
+        build: .
+        ports:
+            - "8000:8000"
+        restart: always
