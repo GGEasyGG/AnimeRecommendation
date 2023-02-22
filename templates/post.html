@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Anime recommendation results</title>
+    <style>
+        html, body {
+            display: block;
+            text-align: center;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 15px;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        a {
+            text-decoration: none;
+           }
+
+        .content1 {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .content2 {
+            margin: auto;
+            margin-top: 25px;
+        }
+
+        .content4 {
+            margin: auto;
+            margin-top: 5px;
+        }
+
+        .content3 {
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            margin: auto;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+<div class="content2">
+    {{ title|safe }}
+</div>
+<div class="content4">
+    {{ site|safe }}
+</div>
+<div class="content3">
+<div class="content1">
+{% for table in tables %}
+            {{ table|safe }}
+{% endfor %}
+</div>
+    </div>
+<form method="GET">
+  <div>
+    <button>Back to anime selection</button>
+  </div>
+</form>
+</body>
+</html>

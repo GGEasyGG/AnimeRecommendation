@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anime recommendation</title>
+    <style>
+    form {
+        tex-align: center
+        display: block
+        width:250px;
+    }
+    .content1 {
+            margin: auto;
+            width:250px;
+            margin-top: 20px;
+            margin-left: 840px;
+        }
+    .content2 {
+            margin: auto;
+            width:250px;
+            margin-top: 10px;
+            margin-left: 260px;
+        }
+        .content3 {
+            margin: auto;
+            width:250px;
+            margin-top: 10px;
+            margin-right: 1000px;
+        }
+        select {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<form method="POST">
+  <div class="content1">
+    Choose an anime
+      </div>
+      <div class="content3">
+    <select name=lst size="5" required="required">
+    {% for colour in lst %}
+    <option value= "{{colour}}"> {{colour}} </option>"
+    {% endfor %}
+        </select>
+          <div class="content2">
+          <input type="submit" value="Recommend anime">
+              </div>
+          </div>
+</form>
+</body>
+</html>
